@@ -23,8 +23,7 @@ UserProfileComponent = __decorate([
     core_1.Component({
         selector: 'user-profile',
         template: "\n\t\t<div class=\"jumbotron\" *ngIf=\"user\">\n\t      <h2>{{ user.name }} <small> {{user.username}}</small></h2>\n\t      <input class=\"form-control\" [(ngModel)]=\"user.name\">\n\t    </div>\n\t"
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], UserProfileComponent);
 exports.UserProfileComponent = UserProfileComponent;
 //# sourceMappingURL=user-profile.component.js.map

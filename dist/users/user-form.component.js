@@ -34,8 +34,7 @@ UserFormComponent = __decorate([
         selector: 'user-form',
         template: "\n\t\t<form #form=\"ngForm\" (submit)=\"onSubmit()\" *ngIf=\"active\">\n\n\t\t{{ form.valid }}\n\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'has-error': name.invalid && name.touched }\">\n\t\t\t\t<input type=\"text\" class=\"form-control\" name=\"name\" placeholder=\"Name\" required\n\t\t\t\t\t   [(ngModel)]=\"newUser.name\" #name=\"ngModel\">\n\n\t\t\t\t<span class=\"help-block\" *ngIf=\"name.invalid && name.touched\">Name is required</span>\n\t\t\t</div>\n\n\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'has-error': username.invalid && username.touched }\">\n\t\t\t\t<input type=\"text\" class=\"form-control\" name=\"username\" placeholder=\"Username\" required\n\t\t\t\t\t\t[(ngModel)]=\"newUser.username\" #username=\"ngModel\">\n\n\t\t\t\t<span class=\"help-block\" *ngIf=\"username.invalid && username.touched\">Username is required</span>\n\t\t\t</div>\n\n\t\t\t<button type=\"submit\" class=\"btn btn-lg btn-block btn-primary\" [disabled] = \"form.invalid\">\n\t\t\t\tCreate User\n\t\t\t</button>\n\t\t</form>\n\t",
         styles: ["\n\t\tform {\n\t\t\tpadding: 10px;\n\t\t\tbackground: #ECF0F1;\n\t\t\tborder-radius: 3px;\n\t\t\tmargin-bottom: 30px;\n\t\t}\n\t"]
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], UserFormComponent);
 exports.UserFormComponent = UserFormComponent;
 //# sourceMappingURL=user-form.component.js.map
