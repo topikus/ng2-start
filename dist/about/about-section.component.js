@@ -9,19 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.message = 'Hello!';
+var AboutSectionComponent = (function () {
+    function AboutSectionComponent() {
     }
-    return AppComponent;
+    return AboutSectionComponent;
 }());
-AppComponent = __decorate([
+AboutSectionComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: './app/app.component.html',
-        styleUrls: ['./app/app.component.css']
+        template: "\n\t\t<h2 class=\"text-center\">About Section</h2>\n\t\t<router-outlet></router-outlet>\n\t"
     }),
     __metadata("design:paramtypes", [])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], AboutSectionComponent);
+exports.AboutSectionComponent = AboutSectionComponent;
+//# sourceMappingURL=about-section.component.js.map

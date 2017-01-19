@@ -5,3 +5,7 @@
 .jumbotron .glyphicon {
 	font-size: 7em;
 }
+
+.active {
+	color: #000 !important;
+}
