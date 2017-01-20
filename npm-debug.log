@@ -1,33 +1,36 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
-2 info using npm@3.5.2
-3 info using node@v4.2.6
+1 verbose cli [ 'd:\\node\\node.exe',
+1 verbose cli   'd:\\node\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.9.3
+3 info using node@v6.2.0
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle ng2-test@1.0.0~prestart: ng2-test@1.0.0
 6 silly lifecycle ng2-test@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle ng2-test@1.0.0~start: ng2-test@1.0.0
 8 verbose lifecycle ng2-test@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle ng2-test@1.0.0~start: PATH: /usr/share/npm/bin/node-gyp-bin:/home/anton/www/ng2-start/node_modules/.bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-10 verbose lifecycle ng2-test@1.0.0~start: CWD: /home/anton/www/ng2-start
-11 silly lifecycle ng2-test@1.0.0~start: Args: [ '-c', 'tsc && concurrently "npm run tsc:w" "npm run lite"' ]
+9 verbose lifecycle ng2-test@1.0.0~start: PATH: D:\node\node_modules\npm\bin\node-gyp-bin;D:\heroku\ng2-start\node_modules\.bin;d:\node;D:\app\anton\product\12.1.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;d:\node\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;D:\wamp64\bin\php\php7.0.0;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\anton\AppData\Roaming\Composer\vendor\bin
+10 verbose lifecycle ng2-test@1.0.0~start: CWD: D:\heroku\ng2-start
+11 silly lifecycle ng2-test@1.0.0~start: Args: [ '/d /s /c',
+11 silly lifecycle   'tsc && concurrently "npm run tsc:w" "npm run lite"' ]
 12 silly lifecycle ng2-test@1.0.0~start: Returned: code: 2  signal: null
 13 info lifecycle ng2-test@1.0.0~start: Failed to exec start script
 14 verbose stack Error: ng2-test@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite"`
 14 verbose stack Exit status 2
-14 verbose stack     at EventEmitter.<anonymous> (/usr/share/npm/lib/utils/lifecycle.js:232:16)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at EventEmitter.emit (events.js:172:7)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/spawn.js:24:14)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at ChildProcess.emit (events.js:172:7)
-14 verbose stack     at maybeClose (internal/child_process.js:821:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+14 verbose stack     at EventEmitter.<anonymous> (D:\node\node_modules\npm\lib\utils\lifecycle.js:245:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (D:\node\node_modules\npm\lib\utils\spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:850:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
 15 verbose pkgid ng2-test@1.0.0
-16 verbose cwd /home/anton/www/ng2-start
-17 error Linux 4.8.0-34-generic
-18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
-19 error node v4.2.6
-20 error npm  v3.5.2
+16 verbose cwd D:\heroku\ng2-start
+17 error Windows_NT 6.1.7601
+18 error argv "d:\\node\\node.exe" "d:\\node\\node_modules\\npm\\bin\\npm-cli.js" "start"
+19 error node v6.2.0
+20 error npm  v3.9.3
 21 error code ELIFECYCLE
 22 error ng2-test@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite"`
 22 error Exit status 2

@@ -18,7 +18,7 @@ import { UserService } from './shared/services/user.service';
 	  AppComponent,
 	  HomeComponent,
 	  ContactComponent,
-	  NotFoundComponent,
+	  NotFoundComponent
 ],
 providers: [
 ],

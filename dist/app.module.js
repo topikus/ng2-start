@@ -32,7 +32,7 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             home_component_1.HomeComponent,
             contact_component_1.ContactComponent,
-            not_found_component_1.NotFoundComponent,
+            not_found_component_1.NotFoundComponent
         ],
         providers: [],
         bootstrap: [app_component_1.AppComponent]

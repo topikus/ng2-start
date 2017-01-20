@@ -9,24 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var AboutComponent = (function () {
-    function AboutComponent(route) {
-        this.route = route;
+var DashboardUsersHomeComponent = (function () {
+    function DashboardUsersHomeComponent() {
     }
-    AboutComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.route.data.forEach(function (data) { return _this.users = data.users; });
-    };
-    return AboutComponent;
+    return DashboardUsersHomeComponent;
 }());
-AboutComponent = __decorate([
+DashboardUsersHomeComponent = __decorate([
     core_1.Component({
-        selector: 'about-page',
-        templateUrl: './app/about/about.component.html',
-        styleUrls: ['./app/about/about.component.css']
+        template: "i am dashboard user home"
     }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute])
-], AboutComponent);
-exports.AboutComponent = AboutComponent;
-//# sourceMappingURL=about.component.js.map
+    __metadata("design:paramtypes", [])
+], DashboardUsersHomeComponent);
+exports.DashboardUsersHomeComponent = DashboardUsersHomeComponent;
+//# sourceMappingURL=dashboard-users-home.component.js.map

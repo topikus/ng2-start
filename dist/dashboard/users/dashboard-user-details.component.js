@@ -10,23 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var AboutComponent = (function () {
-    function AboutComponent(route) {
+var user_service_1 = require("../../shared/services/user.service");
+var DashboardUserDetailsComponent = (function () {
+    function DashboardUserDetailsComponent(service, route) {
+        this.service = service;
         this.route = route;
     }
-    AboutComponent.prototype.ngOnInit = function () {
+    DashboardUserDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.route.data.forEach(function (data) { return _this.users = data.users; });
+        this.route.params.forEach(function (params) {
+            var username = params['username'];
+            _this.service.getUser(username).then(function (user) { return _this.user = user; });
+        });
     };
-    return AboutComponent;
+    return DashboardUserDetailsComponent;
 }());
-AboutComponent = __decorate([
+DashboardUserDetailsComponent = __decorate([
     core_1.Component({
-        selector: 'about-page',
-        templateUrl: './app/about/about.component.html',
-        styleUrls: ['./app/about/about.component.css']
+        template: " \n\t\t<div *ngIf=\"user\">\n\t\t\t<h2> {{ user.name }}</h2>\n\t\t</div>\n\t"
     }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute])
-], AboutComponent);
-exports.AboutComponent = AboutComponent;
-//# sourceMappingURL=about.component.js.map
+    __metadata("design:paramtypes", [user_service_1.UserService, router_1.ActivatedRoute])
+], DashboardUserDetailsComponent);
+exports.DashboardUserDetailsComponent = DashboardUserDetailsComponent;
+//# sourceMappingURL=dashboard-user-details.component.js.map

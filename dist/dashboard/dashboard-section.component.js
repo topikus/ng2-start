@@ -9,24 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var AboutComponent = (function () {
-    function AboutComponent(route) {
-        this.route = route;
+var DashboardSectionComponent = (function () {
+    function DashboardSectionComponent() {
     }
-    AboutComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.route.data.forEach(function (data) { return _this.users = data.users; });
-    };
-    return AboutComponent;
+    return DashboardSectionComponent;
 }());
-AboutComponent = __decorate([
+DashboardSectionComponent = __decorate([
     core_1.Component({
-        selector: 'about-page',
-        templateUrl: './app/about/about.component.html',
-        styleUrls: ['./app/about/about.component.css']
+        template: "\n\t\t<h1 class=\"text-center\">Dashboard Section</h1>\n\t\t<router-outlet></router-outlet>\n\t"
     }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute])
-], AboutComponent);
-exports.AboutComponent = AboutComponent;
-//# sourceMappingURL=about.component.js.map
+    __metadata("design:paramtypes", [])
+], DashboardSectionComponent);
+exports.DashboardSectionComponent = DashboardSectionComponent;
+//# sourceMappingURL=dashboard-section.component.js.map

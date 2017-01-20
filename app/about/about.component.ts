@@ -14,6 +14,6 @@ export class AboutComponent implements OnInit{
 	constructor(private route: ActivatedRoute) {}
 
 	ngOnInit() {
-		this.route.data.forEach((data: { users: User[] }) => this.users = data.users;);
+		this.route.data.forEach((data: { users: User[] }) => this.users = data.users);
 	}
 }
