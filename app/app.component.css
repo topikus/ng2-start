@@ -9,3 +9,7 @@
 .active {
 	color: #000 !important;
 }
+
+.navbar-right {
+	margin-right: 0;
+}

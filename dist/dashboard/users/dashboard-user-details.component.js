@@ -12,24 +12,45 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var user_service_1 = require("../../shared/services/user.service");
 var DashboardUserDetailsComponent = (function () {
-    function DashboardUserDetailsComponent(service, route) {
+    function DashboardUserDetailsComponent(service, route, router) {
         this.service = service;
         this.route = route;
+        this.router = router;
     }
     DashboardUserDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.forEach(function (params) {
             var username = params['username'];
-            _this.service.getUser(username).then(function (user) { return _this.user = user; });
+            _this.service.getUser(username).then(function (user) {
+                _this.user = user;
+                _this.editName = user.name;
+            });
         });
+    };
+    //don`t save, navigate to dashboard uesers
+    DashboardUserDetailsComponent.prototype.cancel = function () {
+        this.router.navigate(['/dashboard/users']);
+    };
+    DashboardUserDetailsComponent.prototype.save = function () {
+        this.user.name = this.editName;
+        this.router.navigate(['/dashboard/users']);
+    };
+    DashboardUserDetailsComponent.prototype.canDeactivate = function () {
+        console.log('i am navigating away');
+        if (this.user.name !== this.editName) {
+            return window.confirm('Disgard changes?');
+        }
+        return true;
     };
     return DashboardUserDetailsComponent;
 }());
 DashboardUserDetailsComponent = __decorate([
     core_1.Component({
-        template: " \n\t\t<div *ngIf=\"user\">\n\t\t\t<h2> {{ user.name }}</h2>\n\t\t</div>\n\t"
+        template: " \n\t\t<div class=\"jumbotron\">\n\t\t\t<div *ngIf=\"user\">\n\t\t\t\t<h2> {{ user.name }}</h2>\n\n\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t<input type=\"text\" [(ngModel)]=\"editName\" class=\"form-control\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"form-group text-center\">\n\t\t\t\t\t<button (click)=\"cancel()\" class=\"btn btn-danger\">Cancel</button>\n\t\t\t\t\t<button (click)=\"save()\" class=\"btn btn-success\">Save</button>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t"
     }),
-    __metadata("design:paramtypes", [user_service_1.UserService, router_1.ActivatedRoute])
+    __metadata("design:paramtypes", [user_service_1.UserService,
+        router_1.ActivatedRoute,
+        router_1.Router])
 ], DashboardUserDetailsComponent);
 exports.DashboardUserDetailsComponent = DashboardUserDetailsComponent;
 //# sourceMappingURL=dashboard-user-details.component.js.map
