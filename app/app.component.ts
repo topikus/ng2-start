@@ -18,8 +18,4 @@ export class AppComponent {
 		this.activeUser = user;
 		console.log(this.activeUser);
 	}
-
-	onUserCreated(event) {
-		this.users.push(event.user);
-	}
 } 
