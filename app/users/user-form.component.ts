@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { User } from '../shared/models/user';
 
 @Component({
 	selector: 'user-form',
 	template: `
-		<form #form="ngForm" (submit)="onSubmit()">
+		<form #form="ngForm" (submit)="onSubmit()" *ngIf="active">
 
 		{{ form.valid }}
 			<div class="form-group" [ngClass]="{ 'has-error': name.invalid && name.touched }">
@@ -37,8 +37,14 @@ import { User } from '../shared/models/user';
 })
 
 export class UserFormComponent {
+	@Output() userCreated = new EventEmitter();
 	newUser: User = new User();
+	active: boolean = true;
+
 	onSubmit() {
-		console.log('Are you working?' + this.newUser.name);
+		this.userCreated.emit({ user: this.newUser});
+		this.newUser = new User();
+		this.active = false;
+		setTimeout(() => this.active = true, 0);
 	}
 }
